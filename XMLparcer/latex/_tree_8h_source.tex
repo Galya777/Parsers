@@ -1,0 +1,45 @@
+\hypertarget{_tree_8h_source}{}\doxysection{Tree.\+h}
+\label{_tree_8h_source}\index{C:/Users/hp/Desktop/XMLparcer/Tree.h@{C:/Users/hp/Desktop/XMLparcer/Tree.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Dictionary.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Element.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{keyword}{class }\mbox{\hyperlink{class_tree}{Tree}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_element}{Element}}}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_tree_ad376a7c639d857312f5de2ef47482f68}{Tree}}();}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_tree_a8c5278b7d90c7905d44acac2b8509641}{Tree}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_tree}{Tree}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_tree}{Tree}}\& \mbox{\hyperlink{class_tree_a3d714671b95daf7ea608024afb425160}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_tree}{Tree}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_tree_abdc38545cf3f588725b5d8b8075b3866}{\string~Tree}}();}
+\DoxyCodeLine{17     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* \mbox{\hyperlink{class_tree_af0e4ee59906834eb488f67aad03445f8}{getRoot}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{19     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_tree_a13218041dcc074dd98a2fb8e02bfe6ed}{hasElementWithId}}(std::string \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_a8fba2745a38b63b9127b11da8f99641c}{saveInFile}}(std::string filePath) \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_a69c34b87afd761de924564859d057cdf}{print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_tree_a1bc3975aef925647edf9998883949076}{printAttribute}}(std::string \textcolor{keywordtype}{id}, std::string key) \textcolor{keyword}{const};}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_aeb8f3a5f0c4f168fb14cb152eb597d5e}{setAttribute}}(std::string \textcolor{keywordtype}{id}, std::string key, std::string value);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_af4c5648e277e5f9e4e37c93da5421d34}{setText}}(std::string \textcolor{keywordtype}{id}, std::string textContent);}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_a3f72efc84cda79be5434d0dcb315dd51}{setId}}(std::string oldId, std::string newId);}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_a02d6a5ae04a3144a14df35564ab80e88}{printChildren}}(std::string \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* \mbox{\hyperlink{class_tree_ac1f2225d20171c9d4dec901b30e05200}{getChildByIndex}}(std::string \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} index) \textcolor{keyword}{const};}
+\DoxyCodeLine{37     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* \mbox{\hyperlink{class_element_aa3cb3751548209807b0fe646ea792fcd}{getLastChild}}(std::string \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{39     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* \mbox{\hyperlink{class_tree_a6081fbf4cc4a4e745cafa97a917854f0}{getParent}}(std::string \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_tree_ad10e866e496d95696696cfde9ce25ec2}{deleteAttribute}}(std::string \textcolor{keywordtype}{id}, std::string key);}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_tree_aa3e929ba9c2b941dad609a427135478c}{addChild}}(std::string \textcolor{keywordtype}{id}, \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}\& el);}
+\DoxyCodeLine{45     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* \mbox{\hyperlink{class_tree_a3b74bc733d4c442a8cc21af7dde985fe}{getElement}}(std::string \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{47     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_tree_aa5a2572fe77efa6c552d97f18746037c}{remove}}(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{49     std::vector<const Element*> \mbox{\hyperlink{class_tree_ac8378e162e390e1d37d0695893687d63}{getElementsByTagName}}(std::string tagName) \textcolor{keyword}{const};}
+\DoxyCodeLine{51     std::vector<const Element*> \mbox{\hyperlink{class_tree_ab6dcbe9794bf4771060672320bd1369b}{getElementsByAttribute}}(std::string attribute, \textcolor{keyword}{const} std::string value = \textcolor{stringliteral}{"{}"{}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{53     std::vector<const Element*> \mbox{\hyperlink{class_tree_ab1e1cdd73d14015e8d9d4d4928905b29}{getDescendants}}(std::string \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} clear();}
+\DoxyCodeLine{55 \textcolor{keyword}{private}:}
+\DoxyCodeLine{56     \mbox{\hyperlink{class_element}{Element}}* root;}
+\DoxyCodeLine{57     \textcolor{keywordtype}{unsigned} countOfElements = 0;}
+\DoxyCodeLine{58     \mbox{\hyperlink{class_dictionary}{Dictionary<std::string, const Element*>}} ids;}
+\DoxyCodeLine{59     \mbox{\hyperlink{class_element}{Element}}* getElementById(std::string \textcolor{keywordtype}{id}, \mbox{\hyperlink{class_element}{Element}}*);}
+\DoxyCodeLine{60     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* getElementById(std::string \textcolor{keywordtype}{id}, \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}*) \textcolor{keyword}{const};}
+\DoxyCodeLine{61 \};}
+\DoxyCodeLine{62 }
+
+\end{DoxyCode}

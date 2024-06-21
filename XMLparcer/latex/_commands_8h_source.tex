@@ -1,0 +1,47 @@
+\hypertarget{_commands_8h_source}{}\doxysection{Commands.\+h}
+\label{_commands_8h_source}\index{C:/Users/hp/Desktop/XMLparcer/Commands.h@{C:/Users/hp/Desktop/XMLparcer/Commands.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Parcer.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Element.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Tree.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}HelpingFunctions.h"{}}}
+\DoxyCodeLine{6 \textcolor{comment}{/*}}
+\DoxyCodeLine{7 \textcolor{comment}{* Този клас представлява прогрмата и наличните ѝ функции}}
+\DoxyCodeLine{8 \textcolor{comment}{*/}}
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_commands}{Commands}}: \textcolor{keyword}{public} \mbox{\hyperlink{class_helping_functions}{HelpingFunctions}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_commands_ae1c963fdcee95bcf693ad3f4d955af72}{run}}();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_parser}{Parser}} parser;}
+\DoxyCodeLine{17     \mbox{\hyperlink{class_tree}{Tree}} tree;}
+\DoxyCodeLine{19     \textcolor{keywordtype}{bool} hasChanged = \textcolor{keyword}{false};}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} openFile(std::string);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} closeFile();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} saveFile();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} saveAs(std::string);}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} help();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{bool} exit();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} print();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} printAttribute(std::string \textcolor{keywordtype}{id}, std::string key);}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} setAttribute(std::string \textcolor{keywordtype}{id}, std::string key, std::string value);}
+\DoxyCodeLine{39     \textcolor{keywordtype}{void} printChildren(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} printParent(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} printChildByIndex(std::string \textcolor{keywordtype}{id}, \textcolor{keywordtype}{int} index);}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} printText(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} setText(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} setId(std::string oldId);}
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} removeAttribute(std::string \textcolor{keywordtype}{id}, std::string key);}
+\DoxyCodeLine{53     \textcolor{keywordtype}{void} addChild(std::string \textcolor{keywordtype}{id}, std::string type);}
+\DoxyCodeLine{55     \textcolor{keywordtype}{void} remove(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{57     \textcolor{keywordtype}{void} xmlPath(std::string xmlPath);}
+\DoxyCodeLine{59     \textcolor{keywordtype}{void} printDescendants(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{61     \textcolor{keywordtype}{bool} fileIsOpened() \textcolor{keyword}{const};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63 \};}
+\DoxyCodeLine{64 }
+
+\end{DoxyCode}

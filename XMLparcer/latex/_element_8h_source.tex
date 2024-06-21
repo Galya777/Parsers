@@ -1,0 +1,57 @@
+\hypertarget{_element_8h_source}{}\doxysection{Element.\+h}
+\label{_element_8h_source}\index{C:/Users/hp/Desktop/XMLparcer/Element.h@{C:/Users/hp/Desktop/XMLparcer/Element.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Dictionary.h"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{6 \textcolor{comment}{/*}}
+\DoxyCodeLine{7 \textcolor{comment}{* Base class representing an element in general}}
+\DoxyCodeLine{8 \textcolor{comment}{* The other elements will be its children }}
+\DoxyCodeLine{9 \textcolor{comment}{*/}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{12     \textcolor{keyword}{const} std::string DEFAULT\_ID = \textcolor{stringliteral}{"{}def"{}};}
+\DoxyCodeLine{13     \textcolor{keyword}{const} std::string DEFAULT\_TEXT\_CONTENT = \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{14     \textcolor{keyword}{const} std::string DEFAULT\_TYPE = \textcolor{stringliteral}{"{}type"{}};}
+\DoxyCodeLine{15     }
+\DoxyCodeLine{16 \textcolor{keyword}{class }\mbox{\hyperlink{class_element}{Element}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_element_a50e4a55fa44ae9e30d2ea577e2a26050}{Element}}(\textcolor{keyword}{const} std::string type = DEFAULT\_TYPE, \textcolor{keyword}{const} std::string \textcolor{keywordtype}{id} = DEFAULT\_ID, \textcolor{keyword}{const} std::string textContent = DEFAULT\_TEXT\_CONTENT, \mbox{\hyperlink{class_element}{Element}}* parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_add71298a38047875e99cbb0c03b09e75}{addChild}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}\& el);}
+\DoxyCodeLine{24     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_a05b838860d652745c992389426a69e1b}{setTextContent}}(std::string textContent);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_a980f1d323661bb30e5e9b087d0a807e8}{setId}}(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_af5fb6ce1f5b6217f63a4151c86ea77b0}{setType}}(std::string type);}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_a4f451e10a7ad2a29b5d23a7301fcf596}{removeChild}}(std::string \textcolor{keywordtype}{id});}
+\DoxyCodeLine{32     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_aa2bd4da888ba7068c1a7675c0408423f}{removeDescendant}}(std::string \textcolor{keywordtype}{id}, \mbox{\hyperlink{class_element}{Element}}*);}
+\DoxyCodeLine{34     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_aaa175e495e2c72d8e99a509fa70ac64d}{setAttribute}}(std::string key, std::string value);}
+\DoxyCodeLine{36     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_a2b20f333c0a4993d6ceee99a83a64cf3}{hasAttribute}}(std::string key, std::string value = \textcolor{stringliteral}{"{}"{}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{38     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_a7ed688df70f98385474104458bdc9374}{hasChild}}(std::string \textcolor{keywordtype}{id}) \textcolor{keyword}{const};}
+\DoxyCodeLine{40     std::vector<const Element*> \mbox{\hyperlink{class_element_a9478b02b5f27b50ff29f9d59a2454c31}{getChildrenByType}}(std::string type) \textcolor{keyword}{const};}
+\DoxyCodeLine{42     std::vector<const Element*> \mbox{\hyperlink{class_element_aa3edc43e4407363ef521fb5026c93c22}{getChildrenByAttribute}}(std::string key, std::string value = \textcolor{stringliteral}{"{}"{}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{44     std::vector<const Element*> \mbox{\hyperlink{class_element_ae7c0c589370cd36d870ace183474b367}{getChildrenByIndex}}(\textcolor{keywordtype}{int} index) \textcolor{keyword}{const};}
+\DoxyCodeLine{46     std::vector<const Element*> \mbox{\hyperlink{class_element_abf3d6b75212724c58442002bb0c8b166}{getDescendants}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* el) \textcolor{keyword}{const};}
+\DoxyCodeLine{48     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_element_ac7a691bc06219eba25eae3285bc35881}{removeAttribute}}(std::string key);}
+\DoxyCodeLine{50     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* \mbox{\hyperlink{class_element_a05c96009a64af6f2788fe71ff1adc406}{getChild}}(\textcolor{keywordtype}{int} index) \textcolor{keyword}{const};}
+\DoxyCodeLine{51     std::vector<Element*> getChildren();}
+\DoxyCodeLine{52     std::vector<const Element*> getChildren() \textcolor{keyword}{const};}
+\DoxyCodeLine{54     \textcolor{keyword}{const} \mbox{\hyperlink{class_element}{Element}}* \mbox{\hyperlink{class_element_aa3cb3751548209807b0fe646ea792fcd}{getLastChild}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56     \textcolor{keyword}{const} std::string \mbox{\hyperlink{class_element_ab2e73a91cf0ae388caf0d78132ce677e}{getText}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{58     \textcolor{keyword}{const} std::string \mbox{\hyperlink{class_element_ab86a6ed2bbff39d7fc29ff42db3e78cd}{getId}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{60     \textcolor{keyword}{const} \mbox{\hyperlink{class_dictionary}{Dictionary<std::string, std::string>}}\& \mbox{\hyperlink{class_element_a5ed273a287396ada8b6133ebe067fee4}{getAttributes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{62     \textcolor{keyword}{const} std::string \mbox{\hyperlink{class_element_aa86580374d912bdeadfb0bdac9e5f21b}{getType}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{64     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_element_aeff25c0bb88ca1e19219ac8b7f4283eb}{saveInFile}}(std::ostream\& os, \textcolor{keywordtype}{int} k = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{66     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_element_ae29312d18a3104efca6d1d66d5eb48be}{print}}(std::ostream\& os, \textcolor{keywordtype}{int} k = 0) \textcolor{keyword}{const};}
+\DoxyCodeLine{68     \textcolor{keyword}{friend} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_element_aff8a0ac9433b2a979d7e3a64e3a3fb62}{freeElement}}(\mbox{\hyperlink{class_element}{Element}}*);}
+\DoxyCodeLine{69 \textcolor{keyword}{private}:}
+\DoxyCodeLine{70     std::string type;}
+\DoxyCodeLine{71     std::string id;}
+\DoxyCodeLine{72     std::string textContent;}
+\DoxyCodeLine{73     std::vector<Element*> children;}
+\DoxyCodeLine{74     \mbox{\hyperlink{class_dictionary}{Dictionary<std::string, std::string>}} attributes;}
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{76 }
+
+\end{DoxyCode}

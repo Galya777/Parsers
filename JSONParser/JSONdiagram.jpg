@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ArrayJSON">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUQAACAgAAAgAAAAIAiAAAAAAAAAgAAAACgAECAAAAA=</HashCode>
+      <FileName>ArrayJSON.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Base">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAACAAAAAAAEAgAAAAGgAEAAAAAA=</HashCode>
+      <FileName>Base.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoolJSON">
+    <Position X="6.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAACAAAAAAAAggCAAACwAEAAAAAA=</HashCode>
+      <FileName>BoolJSON.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Commands">
+    <Position X="8.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAggCCACAAAAAACQAgAAAAAQAAAAABahAAAAYAAA=</HashCode>
+      <FileName>Commands.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item">
+    <Position X="4.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQCAAAAACJAAEAAAEAAAAAAAAAAAgAEAAQAA=</HashCode>
+      <FileName>Item.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JSONTable">
+    <Position X="2.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAEAAAAAgAiAAAAAAA=</HashCode>
+      <FileName>JSONTable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="jsonTable">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAEAIAAAAAAAAAAAAAACAAQAAACAAA=</HashCode>
+      <FileName>JSONTable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JSONtYPE">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEYIRAAAAAAIEBAEAAAAAEBAIAAAAAAAAAAAA=</HashCode>
+      <FileName>JSONtYPE.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NULL_JSON">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAACAAAAAAAAAgAAAACgAEAAAAAA=</HashCode>
+      <FileName>NULL_JSON.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NumberJSON">
+    <Position X="4" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAAAAAAAAABCgAAAAAAAAgAAAACgAEAAAAAA=</HashCode>
+      <FileName>NumberJSON.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectJSON">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUUAgAAAAAAAAABAAAiAgAAAAAAAgAAAACggEAAAAAA=</HashCode>
+      <FileName>ObjectJSON.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StringJSON">
+    <Position X="6.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAAAAAAAAAAAACAAAAAAAAAgCAAACoAEAAAAAA=</HashCode>
+      <FileName>StringJSON.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Typedef Name="TypeArray" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ArrayJSON.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ItemVector" Collapsed="true">
+    <Position X="2.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ObjectJSON.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

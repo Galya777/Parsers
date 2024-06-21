@@ -1,0 +1,101 @@
+\hypertarget{class_element}{}\doxysection{Element Class Reference}
+\label{class_element}\index{Element@{Element}}
+Inheritance diagram for Element\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_element}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_element_a50e4a55fa44ae9e30d2ea577e2a26050}\label{class_element_a50e4a55fa44ae9e30d2ea577e2a26050}} 
+{\bfseries Element} (const std\+::string type=DEFAULT\+\_\+\+TYPE, const std\+::string id=DEFAULT\+\_\+\+ID, const std\+::string text\+Content=DEFAULT\+\_\+\+TEXT\+\_\+\+CONTENT, \mbox{\hyperlink{class_element}{Element}} $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em конструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_add71298a38047875e99cbb0c03b09e75}\label{class_element_add71298a38047875e99cbb0c03b09e75}} 
+bool {\bfseries add\+Child} (const \mbox{\hyperlink{class_element}{Element}} \&el)
+\begin{DoxyCompactList}\small\item\em добавя нов елемент \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a05b838860d652745c992389426a69e1b}\label{class_element_a05b838860d652745c992389426a69e1b}} 
+bool {\bfseries set\+Text\+Content} (std\+::string text\+Content)
+\begin{DoxyCompactList}\small\item\em добавя текст \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a980f1d323661bb30e5e9b087d0a807e8}\label{class_element_a980f1d323661bb30e5e9b087d0a807e8}} 
+bool {\bfseries set\+Id} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em променя ид-\/то \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_af5fb6ce1f5b6217f63a4151c86ea77b0}\label{class_element_af5fb6ce1f5b6217f63a4151c86ea77b0}} 
+bool {\bfseries set\+Type} (std\+::string type)
+\begin{DoxyCompactList}\small\item\em променя типа \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a4f451e10a7ad2a29b5d23a7301fcf596}\label{class_element_a4f451e10a7ad2a29b5d23a7301fcf596}} 
+bool {\bfseries remove\+Child} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em премахва елемент \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_aaa175e495e2c72d8e99a509fa70ac64d}\label{class_element_aaa175e495e2c72d8e99a509fa70ac64d}} 
+bool {\bfseries set\+Attribute} (std\+::string key, std\+::string value)
+\begin{DoxyCompactList}\small\item\em приема атрибут \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a2b20f333c0a4993d6ceee99a83a64cf3}\label{class_element_a2b20f333c0a4993d6ceee99a83a64cf3}} 
+bool {\bfseries has\+Attribute} (std\+::string key, std\+::string value=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em проверява дали е зададен атрибут \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a7ed688df70f98385474104458bdc9374}\label{class_element_a7ed688df70f98385474104458bdc9374}} 
+bool {\bfseries has\+Child} (std\+::string id) const
+\begin{DoxyCompactList}\small\item\em проверява дали има наследник \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a9478b02b5f27b50ff29f9d59a2454c31}\label{class_element_a9478b02b5f27b50ff29f9d59a2454c31}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Children\+By\+Type} (std\+::string type) const
+\begin{DoxyCompactList}\small\item\em връща наследника според типа \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_aa3edc43e4407363ef521fb5026c93c22}\label{class_element_aa3edc43e4407363ef521fb5026c93c22}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Children\+By\+Attribute} (std\+::string key, std\+::string value=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em връща наследника според атрибута \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_ae7c0c589370cd36d870ace183474b367}\label{class_element_ae7c0c589370cd36d870ace183474b367}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Children\+By\+Index} (int index) const
+\begin{DoxyCompactList}\small\item\em връща наследника според индекста \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_abf3d6b75212724c58442002bb0c8b166}\label{class_element_abf3d6b75212724c58442002bb0c8b166}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Descendants} (const \mbox{\hyperlink{class_element}{Element}} $\ast$el) const
+\begin{DoxyCompactList}\small\item\em връща всички наследници \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_ac7a691bc06219eba25eae3285bc35881}\label{class_element_ac7a691bc06219eba25eae3285bc35881}} 
+bool {\bfseries remove\+Attribute} (std\+::string key)
+\begin{DoxyCompactList}\small\item\em премахва атрибута \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a05c96009a64af6f2788fe71ff1adc406}\label{class_element_a05c96009a64af6f2788fe71ff1adc406}} 
+const \mbox{\hyperlink{class_element}{Element}} $\ast$ {\bfseries get\+Child} (int index) const
+\begin{DoxyCompactList}\small\item\em връща наследник \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a8f8f5c6525ed8be33e0557fada9c18d3}\label{class_element_a8f8f5c6525ed8be33e0557fada9c18d3}} 
+std\+::vector$<$ \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Children} ()
+\item 
+\mbox{\Hypertarget{class_element_aea181f04e3e864f23eaf5c2d8be6c811}\label{class_element_aea181f04e3e864f23eaf5c2d8be6c811}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Children} () const
+\item 
+\mbox{\Hypertarget{class_element_aa3cb3751548209807b0fe646ea792fcd}\label{class_element_aa3cb3751548209807b0fe646ea792fcd}} 
+const \mbox{\hyperlink{class_element}{Element}} $\ast$ {\bfseries get\+Last\+Child} () const
+\begin{DoxyCompactList}\small\item\em връща последния наследник \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_ab2e73a91cf0ae388caf0d78132ce677e}\label{class_element_ab2e73a91cf0ae388caf0d78132ce677e}} 
+const std\+::string {\bfseries get\+Text} () const
+\begin{DoxyCompactList}\small\item\em връща текста \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_ab86a6ed2bbff39d7fc29ff42db3e78cd}\label{class_element_ab86a6ed2bbff39d7fc29ff42db3e78cd}} 
+const std\+::string {\bfseries get\+Id} () const
+\begin{DoxyCompactList}\small\item\em връша ид-\/то \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_a5ed273a287396ada8b6133ebe067fee4}\label{class_element_a5ed273a287396ada8b6133ebe067fee4}} 
+const \mbox{\hyperlink{class_dictionary}{Dictionary}}$<$ std\+::string, std\+::string $>$ \& {\bfseries get\+Attributes} () const
+\begin{DoxyCompactList}\small\item\em връща атрибутите \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_aa86580374d912bdeadfb0bdac9e5f21b}\label{class_element_aa86580374d912bdeadfb0bdac9e5f21b}} 
+const std\+::string {\bfseries get\+Type} () const
+\begin{DoxyCompactList}\small\item\em връща типа \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_aeff25c0bb88ca1e19219ac8b7f4283eb}\label{class_element_aeff25c0bb88ca1e19219ac8b7f4283eb}} 
+void {\bfseries save\+In\+File} (std\+::ostream \&os, int k=0) const
+\begin{DoxyCompactList}\small\item\em записва във файл \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_element_ae29312d18a3104efca6d1d66d5eb48be}\label{class_element_ae29312d18a3104efca6d1d66d5eb48be}} 
+void {\bfseries print} (std\+::ostream \&os, int k=0) const
+\begin{DoxyCompactList}\small\item\em принтира във файл или на конзолата \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_element_aa2bd4da888ba7068c1a7675c0408423f}\label{class_element_aa2bd4da888ba7068c1a7675c0408423f}} 
+static bool {\bfseries remove\+Descendant} (std\+::string id, \mbox{\hyperlink{class_element}{Element}} $\ast$)
+\begin{DoxyCompactList}\small\item\em премахва наследник \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_element_aff8a0ac9433b2a979d7e3a64e3a3fb62}\label{class_element_aff8a0ac9433b2a979d7e3a64e3a3fb62}} 
+void {\bfseries free\+Element} (\mbox{\hyperlink{class_element}{Element}} $\ast$)
+\begin{DoxyCompactList}\small\item\em изчиства паметта \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hp/\+Desktop/\+XMLparcer/Element.\+h\item 
+C\+:/\+Users/hp/\+Desktop/\+XMLparcer/Element.\+cpp\end{DoxyCompactItemize}

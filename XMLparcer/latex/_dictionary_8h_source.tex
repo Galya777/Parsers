@@ -1,0 +1,198 @@
+\hypertarget{_dictionary_8h_source}{}\doxysection{Dictionary.\+h}
+\label{_dictionary_8h_source}\index{C:/Users/hp/Desktop/XMLparcer/Dictionary.h@{C:/Users/hp/Desktop/XMLparcer/Dictionary.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{4 \textcolor{comment}{/*}}
+\DoxyCodeLine{5 \textcolor{comment}{* This class represents a helper template class.}}
+\DoxyCodeLine{6 \textcolor{comment}{* It is a dictionary for XML language }}
+\DoxyCodeLine{7 \textcolor{comment}{*/}}
+\DoxyCodeLine{8 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{10 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_pair}{Pair}} \{}
+\DoxyCodeLine{11     K first;}
+\DoxyCodeLine{12     V second;}
+\DoxyCodeLine{13 \};}
+\DoxyCodeLine{14 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{15 \textcolor{keyword}{class }\mbox{\hyperlink{class_dictionary}{Dictionary}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_dictionary_a69b86204e013879414d768fee07206ee}{Dictionary}}();}
+\DoxyCodeLine{21     \mbox{\hyperlink{class_dictionary_a18964e5d63f834a1dba8ef509b2f7af1}{Dictionary}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& other);}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& \mbox{\hyperlink{class_dictionary_a270bc77be7f93237522e7bfd0b507f14}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& other);}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary_a4340f7e253e25279bc1265d45b454dc0}{add}}(\textcolor{keyword}{const} K\& key, \textcolor{keyword}{const} V\& value);}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_dictionary_a82933feb3f2ca5eedf2b107050a7c10f}{remove}}(\textcolor{keyword}{const} K\& key);}
+\DoxyCodeLine{29     \textcolor{keyword}{const} V\& \mbox{\hyperlink{class_dictionary_a52bb7b089dd229b937a2ee11e0421175}{find}}(\textcolor{keyword}{const} K\& key) \textcolor{keyword}{const};}
+\DoxyCodeLine{31     \textcolor{keyword}{const} \mbox{\hyperlink{struct_pair}{Pair<K, V>}}* \mbox{\hyperlink{class_dictionary_a3c5d769b4e6bcf471c27be61b0df6ca6}{getPairs}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_dictionary_a1343c6894c79415363fd2dbc88fd6017}{hasKey}}(\textcolor{keyword}{const} K\& key) \textcolor{keyword}{const};}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_dictionary_a44372422fdbfbad500e330665545ba4c}{setValue}}(\textcolor{keyword}{const} K\& key, \textcolor{keyword}{const} V\& value);}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary_a7b088ac4961d1de77562d5d97bfbb435}{print}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dictionary_a21e8d8c6d3bb273c4090c9d19d295170}{getSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary_a398f378e3616210102b1834a41f51649}{clear}}();}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_dictionary_ae37de949fa5cbedd34f21e604fa1edd9}{\string~Dictionary}}();}
+\DoxyCodeLine{44 \textcolor{keyword}{private}:}
+\DoxyCodeLine{46     \mbox{\hyperlink{struct_pair}{Pair<K, V>}}* data;}
+\DoxyCodeLine{48     \textcolor{keywordtype}{int} size;}
+\DoxyCodeLine{50     \textcolor{keywordtype}{int} capacity;}
+\DoxyCodeLine{52     \textcolor{keywordtype}{void} resize();}
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} free() \{}
+\DoxyCodeLine{55         \textcolor{keyword}{delete}[] data;}
+\DoxyCodeLine{56     \}}
+\DoxyCodeLine{58     \textcolor{keywordtype}{void} copyFrom(\textcolor{keyword}{const} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& other);}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{62 \textcolor{keyword}{inline} \mbox{\hyperlink{class_dictionary_a69b86204e013879414d768fee07206ee}{Dictionary<K, V>::Dictionary}}()}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     capacity = 4;}
+\DoxyCodeLine{65     size = 0;}
+\DoxyCodeLine{66     data = \textcolor{keyword}{new} \mbox{\hyperlink{struct_pair}{Pair<K, V>}}[capacity];}
+\DoxyCodeLine{67 \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{70 \textcolor{keyword}{inline} \mbox{\hyperlink{class_dictionary_a69b86204e013879414d768fee07206ee}{Dictionary<K, V>::Dictionary}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& other)}
+\DoxyCodeLine{71 \{}
+\DoxyCodeLine{72     copyFrom(other);}
+\DoxyCodeLine{73 \}}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{76 \textcolor{keyword}{inline} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& \mbox{\hyperlink{class_dictionary_a270bc77be7f93237522e7bfd0b507f14}{Dictionary<K, V>::operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& other)}
+\DoxyCodeLine{77 \{}
+\DoxyCodeLine{78     \textcolor{keywordflow}{if} (\textcolor{keyword}{this} != \&other) \{}
+\DoxyCodeLine{79         free();}
+\DoxyCodeLine{80         copyFrom(other);}
+\DoxyCodeLine{81     \}}
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{83     \textcolor{comment}{// TODO: insert return statement here}}
+\DoxyCodeLine{84 \}}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{86 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{87 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary_a4340f7e253e25279bc1265d45b454dc0}{Dictionary<K, V>::add}}(\textcolor{keyword}{const} K\& key, \textcolor{keyword}{const} V\& value)}
+\DoxyCodeLine{88 \{}
+\DoxyCodeLine{89     \textcolor{keywordflow}{if} (hasKey(key))}
+\DoxyCodeLine{90         \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"{}Key is already added in collection!"{}};}
+\DoxyCodeLine{91     \textcolor{keywordflow}{if} (size == capacity)}
+\DoxyCodeLine{92         resize();}
+\DoxyCodeLine{93     \textcolor{keywordtype}{int} insertIndex = size;}
+\DoxyCodeLine{94     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{95         \textcolor{keywordflow}{if} (key < data[i].first) \{}
+\DoxyCodeLine{96             insertIndex = i;}
+\DoxyCodeLine{97             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{98         \}}
+\DoxyCodeLine{99     \}}
+\DoxyCodeLine{100     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = size; i > insertIndex; i-\/-\/) \{}
+\DoxyCodeLine{101         data[i] = data[i -\/ 1];}
+\DoxyCodeLine{102     \}}
+\DoxyCodeLine{103     data[insertIndex] = \{ key, value \};}
+\DoxyCodeLine{104     size++;}
+\DoxyCodeLine{105 \}}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{108 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_dictionary_a82933feb3f2ca5eedf2b107050a7c10f}{Dictionary<K, V>::remove}}(\textcolor{keyword}{const} K\& key)}
+\DoxyCodeLine{109 \{}
+\DoxyCodeLine{110     \textcolor{keywordtype}{int} removeIndex = -\/1;}
+\DoxyCodeLine{111     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{112         \textcolor{keywordflow}{if} (key == data[i].first) \{}
+\DoxyCodeLine{113             removeIndex = i;}
+\DoxyCodeLine{114             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{115         \}}
+\DoxyCodeLine{116     \textcolor{keywordflow}{if} (removeIndex == -\/1) \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{117     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = removeIndex; i < size -\/ 1; i++) \{}
+\DoxyCodeLine{118         data[i] = data[i + 1];}
+\DoxyCodeLine{119     \}}
+\DoxyCodeLine{120     size-\/-\/;}
+\DoxyCodeLine{121     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{122 \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{125 \textcolor{keyword}{inline} \textcolor{keyword}{const} V\& \mbox{\hyperlink{class_dictionary_a52bb7b089dd229b937a2ee11e0421175}{Dictionary<K, V>::find}}(\textcolor{keyword}{const} K\& key)\textcolor{keyword}{ const}}
+\DoxyCodeLine{126 \textcolor{keyword}{}\{}
+\DoxyCodeLine{127     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{128         \textcolor{keywordflow}{if} (data[i].first == key)}
+\DoxyCodeLine{129             \textcolor{keywordflow}{return} data[i].second;}
+\DoxyCodeLine{130     \textcolor{keywordflow}{throw} \textcolor{stringliteral}{"{}No such key in dictionary!"{}};}
+\DoxyCodeLine{131     \textcolor{comment}{// TODO: insert return statement here}}
+\DoxyCodeLine{132 \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{135 \textcolor{keyword}{inline} \textcolor{keyword}{const} \mbox{\hyperlink{struct_pair}{Pair<K, V>}}* \mbox{\hyperlink{class_dictionary_a3c5d769b4e6bcf471c27be61b0df6ca6}{Dictionary<K, V>::getPairs}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{136 \textcolor{keyword}{}\{}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} data;}
+\DoxyCodeLine{138 \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{141 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_dictionary_a1343c6894c79415363fd2dbc88fd6017}{Dictionary<K, V>::hasKey}}(\textcolor{keyword}{const} K\& key)\textcolor{keyword}{ const}}
+\DoxyCodeLine{142 \textcolor{keyword}{}\{}
+\DoxyCodeLine{143     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{144         \textcolor{keywordflow}{if} (key == data[i].first)}
+\DoxyCodeLine{145             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{146     \}}
+\DoxyCodeLine{147     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{148 \}}
+\DoxyCodeLine{149 }
+\DoxyCodeLine{150 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{151 \textcolor{keyword}{inline} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_dictionary_a44372422fdbfbad500e330665545ba4c}{Dictionary<K, V>::setValue}}(\textcolor{keyword}{const} K\& key, \textcolor{keyword}{const} V\& value)}
+\DoxyCodeLine{152 \{}
+\DoxyCodeLine{153     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{154         \textcolor{keywordflow}{if} (key == data[i].first) \{}
+\DoxyCodeLine{155             data[i].second = value;}
+\DoxyCodeLine{156             \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{157         \}}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159     add(key, value);}
+\DoxyCodeLine{160     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{161 \}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{164 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary_a7b088ac4961d1de77562d5d97bfbb435}{Dictionary<K, V>::print}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{165 \textcolor{keyword}{}\{}
+\DoxyCodeLine{166     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++) \{}
+\DoxyCodeLine{167         std::cout << data[i].first << \textcolor{stringliteral}{"{} "{}} << data[i].second}
+\DoxyCodeLine{168             << std::endl;}
+\DoxyCodeLine{169     \}}
+\DoxyCodeLine{170 \}}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{173 \textcolor{keyword}{inline} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_dictionary_a21e8d8c6d3bb273c4090c9d19d295170}{Dictionary<K, V>::getSize}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{174 \textcolor{keyword}{}\{}
+\DoxyCodeLine{175     \textcolor{keywordflow}{return} size;}
+\DoxyCodeLine{176 \}}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{179 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary_a398f378e3616210102b1834a41f51649}{Dictionary<K, V>::clear}}()}
+\DoxyCodeLine{180 \{}
+\DoxyCodeLine{181     free();}
+\DoxyCodeLine{182     capacity = 4;}
+\DoxyCodeLine{183     data = \textcolor{keyword}{new} \mbox{\hyperlink{struct_pair}{Pair<K, V>}}[capacity];}
+\DoxyCodeLine{184     size = 0;}
+\DoxyCodeLine{185 \}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{188 \textcolor{keyword}{inline} \mbox{\hyperlink{class_dictionary_ae37de949fa5cbedd34f21e604fa1edd9}{Dictionary<K, V>::\string~Dictionary}}()}
+\DoxyCodeLine{189 \{}
+\DoxyCodeLine{190     free();}
+\DoxyCodeLine{191 \}}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{194 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>::resize}}()}
+\DoxyCodeLine{195 \{}
+\DoxyCodeLine{196     capacity *= 2;}
+\DoxyCodeLine{197     \mbox{\hyperlink{struct_pair}{Pair<K, V>}}* ptr = \textcolor{keyword}{new} \mbox{\hyperlink{struct_pair}{Pair<K, V>}}[capacity];}
+\DoxyCodeLine{198     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{199         ptr[i] = data[i];}
+\DoxyCodeLine{200     free();}
+\DoxyCodeLine{201     data = ptr;}
+\DoxyCodeLine{202 \}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 \textcolor{keyword}{template}<\textcolor{keyword}{typename} K, \textcolor{keyword}{typename} V>}
+\DoxyCodeLine{205 \textcolor{keyword}{inline} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>::copyFrom}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_dictionary}{Dictionary<K, V>}}\& other)}
+\DoxyCodeLine{206 \{}
+\DoxyCodeLine{207     size = other.size;}
+\DoxyCodeLine{208     capacity = other.capacity;}
+\DoxyCodeLine{209     data = \textcolor{keyword}{new} \mbox{\hyperlink{struct_pair}{Pair<K, V>}}[capacity];}
+\DoxyCodeLine{210     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; i++)}
+\DoxyCodeLine{211         data[i] = other.data[i];}
+\DoxyCodeLine{212 \}}
+
+\end{DoxyCode}

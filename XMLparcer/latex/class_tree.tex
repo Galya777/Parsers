@@ -1,0 +1,90 @@
+\hypertarget{class_tree}{}\doxysection{Tree Class Reference}
+\label{class_tree}\index{Tree@{Tree}}
+Inheritance diagram for Tree\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tree}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tree_ad376a7c639d857312f5de2ef47482f68}\label{class_tree_ad376a7c639d857312f5de2ef47482f68}} 
+{\bfseries Tree} ()
+\begin{DoxyCompactList}\small\item\em конструкор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a8c5278b7d90c7905d44acac2b8509641}\label{class_tree_a8c5278b7d90c7905d44acac2b8509641}} 
+{\bfseries Tree} (const \mbox{\hyperlink{class_tree}{Tree}} \&)=delete
+\begin{DoxyCompactList}\small\item\em забранява се копирането \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a3d714671b95daf7ea608024afb425160}\label{class_tree_a3d714671b95daf7ea608024afb425160}} 
+\mbox{\hyperlink{class_tree}{Tree}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_tree}{Tree}} \&)=delete
+\begin{DoxyCompactList}\small\item\em оператор = \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_abdc38545cf3f588725b5d8b8075b3866}\label{class_tree_abdc38545cf3f588725b5d8b8075b3866}} 
+{\bfseries $\sim$\+Tree} ()
+\begin{DoxyCompactList}\small\item\em деструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_af0e4ee59906834eb488f67aad03445f8}\label{class_tree_af0e4ee59906834eb488f67aad03445f8}} 
+const \mbox{\hyperlink{class_element}{Element}} $\ast$ {\bfseries get\+Root} () const
+\begin{DoxyCompactList}\small\item\em връша корена на дървото \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a13218041dcc074dd98a2fb8e02bfe6ed}\label{class_tree_a13218041dcc074dd98a2fb8e02bfe6ed}} 
+bool {\bfseries has\+Element\+With\+Id} (std\+::string id) const
+\begin{DoxyCompactList}\small\item\em проверява дали съществува елемент със следния номер \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a8fba2745a38b63b9127b11da8f99641c}\label{class_tree_a8fba2745a38b63b9127b11da8f99641c}} 
+void {\bfseries save\+In\+File} (std\+::string file\+Path) const
+\begin{DoxyCompactList}\small\item\em записва във файл \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a69c34b87afd761de924564859d057cdf}\label{class_tree_a69c34b87afd761de924564859d057cdf}} 
+void {\bfseries print} () const
+\begin{DoxyCompactList}\small\item\em принтира на екрана \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a1bc3975aef925647edf9998883949076}\label{class_tree_a1bc3975aef925647edf9998883949076}} 
+bool {\bfseries print\+Attribute} (std\+::string id, std\+::string key) const
+\begin{DoxyCompactList}\small\item\em извежда атрибутите \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_aeb8f3a5f0c4f168fb14cb152eb597d5e}\label{class_tree_aeb8f3a5f0c4f168fb14cb152eb597d5e}} 
+void {\bfseries set\+Attribute} (std\+::string id, std\+::string key, std\+::string value)
+\begin{DoxyCompactList}\small\item\em задава атрибути \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_af4c5648e277e5f9e4e37c93da5421d34}\label{class_tree_af4c5648e277e5f9e4e37c93da5421d34}} 
+void {\bfseries set\+Text} (std\+::string id, std\+::string text\+Content)
+\begin{DoxyCompactList}\small\item\em задава текст \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a3f72efc84cda79be5434d0dcb315dd51}\label{class_tree_a3f72efc84cda79be5434d0dcb315dd51}} 
+void {\bfseries set\+Id} (std\+::string old\+Id, std\+::string new\+Id)
+\begin{DoxyCompactList}\small\item\em задава пореден номер \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a02d6a5ae04a3144a14df35564ab80e88}\label{class_tree_a02d6a5ae04a3144a14df35564ab80e88}} 
+void {\bfseries print\+Children} (std\+::string id) const
+\begin{DoxyCompactList}\small\item\em принтира налседник по даден номер \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_ac1f2225d20171c9d4dec901b30e05200}\label{class_tree_ac1f2225d20171c9d4dec901b30e05200}} 
+const \mbox{\hyperlink{class_element}{Element}} $\ast$ {\bfseries get\+Child\+By\+Index} (std\+::string id, int index) const
+\begin{DoxyCompactList}\small\item\em връща наследник по индекс \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a57fd31bb49bcb0c1f37680afd2b1c6ad}\label{class_tree_a57fd31bb49bcb0c1f37680afd2b1c6ad}} 
+const \mbox{\hyperlink{class_element}{Element}} $\ast$ {\bfseries get\+Last\+Child} (std\+::string id) const
+\begin{DoxyCompactList}\small\item\em връща последния наследник \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a6081fbf4cc4a4e745cafa97a917854f0}\label{class_tree_a6081fbf4cc4a4e745cafa97a917854f0}} 
+const \mbox{\hyperlink{class_element}{Element}} $\ast$ {\bfseries get\+Parent} (std\+::string id) const
+\begin{DoxyCompactList}\small\item\em връща родителя \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_ad10e866e496d95696696cfde9ce25ec2}\label{class_tree_ad10e866e496d95696696cfde9ce25ec2}} 
+bool {\bfseries delete\+Attribute} (std\+::string id, std\+::string key)
+\begin{DoxyCompactList}\small\item\em изтрива атрибутите \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_aa3e929ba9c2b941dad609a427135478c}\label{class_tree_aa3e929ba9c2b941dad609a427135478c}} 
+void {\bfseries add\+Child} (std\+::string id, const \mbox{\hyperlink{class_element}{Element}} \&el)
+\begin{DoxyCompactList}\small\item\em добавя наследник \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a3b74bc733d4c442a8cc21af7dde985fe}\label{class_tree_a3b74bc733d4c442a8cc21af7dde985fe}} 
+const \mbox{\hyperlink{class_element}{Element}} $\ast$ {\bfseries get\+Element} (std\+::string id) const
+\begin{DoxyCompactList}\small\item\em връща елемент по даден индекс \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_aa5a2572fe77efa6c552d97f18746037c}\label{class_tree_aa5a2572fe77efa6c552d97f18746037c}} 
+bool {\bfseries remove} (std\+::string id)
+\begin{DoxyCompactList}\small\item\em премахва елемент по даден индекс \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_ac8378e162e390e1d37d0695893687d63}\label{class_tree_ac8378e162e390e1d37d0695893687d63}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Elements\+By\+Tag\+Name} (std\+::string tag\+Name) const
+\begin{DoxyCompactList}\small\item\em връша елемент по име \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_ab6dcbe9794bf4771060672320bd1369b}\label{class_tree_ab6dcbe9794bf4771060672320bd1369b}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Elements\+By\+Attribute} (std\+::string attribute, const std\+::string value=\char`\"{}\char`\"{}) const
+\begin{DoxyCompactList}\small\item\em връща елемент по атрибути \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_ab1e1cdd73d14015e8d9d4d4928905b29}\label{class_tree_ab1e1cdd73d14015e8d9d4d4928905b29}} 
+std\+::vector$<$ const \mbox{\hyperlink{class_element}{Element}} $\ast$ $>$ {\bfseries get\+Descendants} (std\+::string id) const
+\begin{DoxyCompactList}\small\item\em връща наследниците по даден индекс \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_aebea8cd6661be6de63ce2ebbf835a687}\label{class_tree_aebea8cd6661be6de63ce2ebbf835a687}} 
+void {\bfseries clear} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hp/\+Desktop/\+XMLparcer/Tree.\+h\item 
+C\+:/\+Users/hp/\+Desktop/\+XMLparcer/Tree.\+cpp\end{DoxyCompactItemize}
